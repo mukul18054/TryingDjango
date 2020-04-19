@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>this is home page</h1>
+welcome {{ name }} ,{{ mlist }}
+<ul>
+{% for temp in mlist %}
+	{% if temp == "a" %}
+		<li>{{ forloop.counter }} - {{temp}}</li>
+	{% elif temp == "b" %}
+		<li>{{ forloop.counter}} - {{temp}}</li>
+	{% else %}
+		<li>{{forloop.counter }} = {{temp|add:-5}}</li>
+	
+	{% endif %}
+{% endfor %}
+</ul>   
+{% endblock content %}
